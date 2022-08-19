@@ -1,0 +1,37 @@
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-4 text-gray-800">Listing of your Incomplete Todo's</h1>
+    <br>
+    {{range .}}
+    <div class="card shadow mb-4">
+      <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Incomplete Todo's:</h6>
+      </div>
+      <div class="card-body">
+        <p>Description: {{.Description}}</p>
+                        <p class="mb-0">CreatedAt: {{.CreatedAt}}<br>
+                        UpdatedAt: {{.UpdatedAt}}<br>
+                        <a href="/markasdone/?todoid={{.TodoId}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Mark Todo as complete</a>
+                        <a href="/deletetodo/?todoid={{.TodoId}}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Delete Todo</a><br></p>
+      </div>
+   </div>
+   {{end}}
+
+</div>
+
+
+{{range .}}
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">Incomplete Todo's:</h6>
+  </div>
+  <div class="card-body">
+    <p>Description: {{.Description}}</p>
+                    <p class="mb-0">CreatedAt: {{.CreatedAt}}<br>
+                    UpdatedAt: {{.UpdatedAt}}<br>
+                    <a href="/markasdone/?todoid={{.TodoId}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Mark Todo as complete</a>
+                    <a href="/deletetodo/?todoid={{.TodoId}}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Delete Todo</a><br></p>
+  </div>
+</div>
+{{end}}
