@@ -17,7 +17,7 @@ import (
 var store = sessions.NewCookieStore([]byte("SAM CRM "))
 
 func main(){
-  tpl,_ = template.ParseGlob("templates/*.html")
+  tpl,_ = template.ParseGlob("template/*.html")
   var err error
   db, err = sql.Open("mysql", "root:@tcp(localhost:3306)/crm")
   if err != nil {
